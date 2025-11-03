@@ -4,8 +4,10 @@ const block = document.querySelector(".projects-project-container");
 
 let current_index = 0;
 
+
 function next_project() {
     let w_value = document.querySelector(".project").offsetWidth;
+    console.log(w_value);
 
     current_index = current_index < 2 ? current_index += 1 : current_index = current_index;
 

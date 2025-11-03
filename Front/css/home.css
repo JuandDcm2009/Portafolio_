@@ -132,7 +132,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     width: 400px;
-    height: 600px;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.863);
     z-index: 1;
     padding: 0px 50px;
@@ -253,6 +253,9 @@ body {
     min-height: 100vh;
     z-index: 0;
     filter: blur(10px) grayscale(0.5);
+    object-fit: cover; /* hace que cubra sin deformarse */
+    object-position: center; /* centra la parte visible */
+    display: block;
 }
 
 .black-cover1 {
@@ -346,7 +349,7 @@ body {
 
 
 
-.skill img {
+.img-skill {
     padding: 20px;
     width: 61px;
     height: auto;
@@ -386,24 +389,12 @@ body {
     z-index: 2;
 }
 
-
-
 .skill:hover .percent-skill {
     opacity: 1;
     z-index: 2;
 }
 
-.skill:active .img-skill {
-    opacity: 0;
-}
 
-.skill:active .percent-skill {
-    opacity: 1;
-}
-
-.skill:hover .cover {
-    height: var(--i);
-}
 
 .percent-skill {
     color: rgb(0, 255, 234);
@@ -543,13 +534,6 @@ body {
     top: 50%;
 }
 
-#button-car:hover {
-    transform: translateX(var(--tr));
-}
-
-#button-car:active {
-    color: aqua;
-}
 
 /* Footer */
 
@@ -564,4 +548,453 @@ body {
 
 .footer-info-container a {
     color: rgb(0, 126, 126);
+}
+
+@media (max-width: 480px) {
+
+
+    main {
+        max-width: 99vw;
+        overflow: hidden;
+    }
+
+    .info-section {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .title-section h1 {
+        width: 200px;
+        text-align: center;
+    }   
+
+    .title-section p {
+        display: none;
+    }
+
+
+
+    .info-img-container {
+        overflow: visible;
+        height: auto;
+        max-height: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 200px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .section-title {
+        top: 0;
+        font-size: 2rem;
+    }
+
+    .section-title-cover {
+        top: 5px;
+        font-size: 2.5rem;
+    }
+
+    .info-container {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        max-width: none;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-p {
+        width: 250px;
+        font-size: 0.8rem;
+    }
+
+    .hdv-button {
+        margin-bottom: 100px;
+        font-size: 0.8rem;
+        padding: 13px 30px;
+    }
+
+    .info-container h2, h3 {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .skills-section {
+        margin-top: 100px;
+        height: auto;
+    }
+
+    .skills-info-title {
+        font-size: 2rem;
+
+    }
+
+    .skills-info-title-back {
+        top: 0px;
+        font-size: 2.5rem;
+    }
+
+    .skills-container {
+        margin-top: 150px;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .fondo-skills {
+        filter: blur(3px);
+        height: 90%;
+    }
+
+    .img-container-skill {
+        width: 90px;
+        height: 90px;
+    }
+
+    .img-skill {
+        width:  50px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .projects-section {
+        margin: 0px auto;
+        width: 90vw;
+        height: auto;
+    }
+
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 300px;
+        padding: 30px;
+    }
+
+    .projects-section-title {
+        font-size: 2rem;
+    }
+
+    .projects-section-title-cover {
+        font-size: 2.5rem;
+    }
+
+    .projects-container {
+        height: auto;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 360px;
+        margin-top: 100px;
+    }
+
+    #button-car {
+        top: 75%;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+    }
+
+    .next-button {
+        right: 30px;
+    }
+
+    .back-button {
+        left: 30px;
+    }
+
+
+    .project img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* hace que cubra sin deformarse */
+        object-position: center; /* centra la parte visible */
+        display: block;
+        min-height: auto;
+    }
+
+    .info-project {
+        width: 100%;
+        height: 600px;
+    }
+
+    .projects-project-container {
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+
+    .title-project {
+        font-size: 1.5rem;
+    }
+
+    .p-project {
+        font-size: 0.8rem;
+    }
+
+    .info-project a {
+        margin-top: 0px;
+        align-self: center;
+    }
+
+
+    .footer-info-container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footer-info-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .designer {
+        width: 300px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    
+    
+    main {
+        max-width: 99vw;
+        overflow: hidden;
+    }
+
+    .title-section p {
+        width: 400px;
+    }
+
+    .info-section {
+        height: 800px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .info-img-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .info-container {
+        width: 70%;
+    }
+
+    .projects-section {
+        margin: 0px auto;
+        width: 90vw;
+        height: auto;
+    }
+
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 420px;
+        padding: 30px;
+    }
+
+    .projects-section-title {
+        font-size: 3rem;
+    }
+
+    .projects-section-title-cover {
+        font-size: 4.5rem;
+    }
+
+    .projects-container {
+        height: auto;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 480px;
+        margin-top: 200px;
+    }
+
+    #button-car {
+        top: 89%;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+    }
+
+    .next-button {
+        right: 30px;
+    }
+
+    .back-button {
+        left: 30px;
+    }
+
+
+    .project img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* hace que cubra sin deformarse */
+        object-position: center; /* centra la parte visible */
+        display: block;
+        min-height: auto;
+    }
+
+    .info-project {
+        width: 100%;
+        height: 600px;
+    }
+
+    .projects-project-container {
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+
+    .title-project {
+        font-size: 1.5rem;
+    }
+
+    .p-project {
+        font-size: 1rem;
+    }
+
+    .info-project a {
+        margin-top: 0px;
+        align-self: center;
+    }
+
+    .footer-info-container{
+        gap: 100px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    
+    main {
+        width: 99vw;
+        overflow: hidden;
+    }
+
+    .info-section {
+        height: auto;
+        padding: 50px 0px;
+    }
+
+    .title-section p {
+        width: 500px;
+
+    }
+
+    .info-img-container {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-p {
+        width: 400px;
+    }
+
+    .img-container {
+        width: 200px;
+        height: 300px;
+    }
+
+    .projects-section {
+        height: auto;
+        padding: 50px 0px;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 660px;
+        padding: 30px;
+    }
+
+    .projects-section-title {
+        font-size: 3rem;
+    }
+
+    .projects-section-title-cover {
+        font-size: 4.5rem;
+    }
+
+    .projects-container {
+        height: auto;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 720px;
+        margin-top: 200px;
+    }
+
+    #button-car {
+        top: 89%;
+        padding: 5px 20px;
+        font-size: 1.5rem;
+    }
+
+    .next-button {
+        right: 30px;
+    }
+
+    .back-button {
+        left: 30px;
+    }
+
+
+    .project img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* hace que cubra sin deformarse */
+        object-position: center; /* centra la parte visible */
+        display: block;
+        min-height: auto;
+    }
+
+    .info-project {
+        width: 100%;
+        height: 600px;
+    }
+
+    .projects-project-container {
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+
+    .title-project {
+        font-size: 1.5rem;
+    }
+
+    .p-project {
+        font-size: 1rem;
+    }
+
+    .info-project a {
+        align-self: center;
+        bottom: -20px;
+    }
+
+    .footer-info-container{
+        gap: 100px;
+    }
+
 }
