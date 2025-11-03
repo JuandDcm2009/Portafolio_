@@ -3,9 +3,14 @@
     src: url('../../Resources/Fonts/Coolvetica\ Rg.otf');
 }
 
+@font-face {
+    font-family: "pfont";
+    src: url('../../Resources/Fonts/Poppins-Regular.ttf');
+}
 
 :root {
     --ocolor: rgb(0, 255, 255);
+    --pcolor: rgba(255, 255, 255, 0.836);
 }
 ::-webkit-scrollbar {
   width: 10px; /* ancho de la barra */
@@ -97,11 +102,13 @@ body {
     border-radius: 100%;
     padding: 10px;
     overflow: visible;
+    transition: all 0.4s ease;;
 }
 
 .social-media-container img:hover {
     cursor: pointer;
     box-shadow: 0px 2px 2px black;
+    border-color: aqua;
 }
 
 
@@ -112,6 +119,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     letter-spacing: 0.10em;
     position: relative;
@@ -124,16 +132,28 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     width: 400px;
-    height: 540px;
-    background-color: rgba(0, 0, 0, 0.418);
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.863);
     z-index: 1;
     padding: 0px 50px;
 }
 
+.dato{
+    margin: 7px 0px;
+}
+
+.info-p {
+    font-family: "pfont";
+    letter-spacing: 0.1em;
+    line-height: 20px;
+    margin: 20px 0px;
+    color: var(--pcolor);
+}
+
 
 .info-container h3 {
-    color: rgb(85, 255, 255);
-    text-shadow: 0px 6px 25px  aqua;
+    color: rgb(0, 255, 255);
+    
     font-size: 2rem;
     margin: 10px 0px;
 }
@@ -144,8 +164,8 @@ body {
     height: auto;
     overflow: hidden;
     position: absolute;
-    filter: grayscale(0.5) saturate(2);
-    opacity: 0.8;
+    filter: grayscale(0) saturate(1);
+    opacity: 0.9;
     
 }
 
@@ -166,28 +186,53 @@ body {
 
 
 .section-title {
-    color: rgba(255, 255, 255, 0.308);
     position: absolute;
-    font-size: 14rem;
+    top: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: normal;
+    text-shadow: 0px 6px 6px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.section-title-cover {
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 2px #ffffff2f;
+    position: absolute;
+    font-size: 4rem;
+    top: -8px;
+    font-weight: normal;
     z-index: 0;
 }
 
 
+.info-img-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .hdv-button {
     text-decoration: none;
-    color: white;
-    border: 1px white solid;
+    background-color: white;
+    color: rgb(0, 0, 0);
     padding: 15px 50px;
     border-radius: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
+    transition: all 0.4s ease;
+    font-weight: bold;
 }
+
 
 /* Skills section*/
 
 
 .skills-section {
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,7 +252,7 @@ body {
     height: auto;
     min-height: 100vh;
     z-index: 0;
-    filter: blur(4px) grayscale(0.5);
+    filter: blur(10px) grayscale(0.5);
 }
 
 .black-cover1 {
@@ -226,37 +271,55 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0px;
+    gap: 20px;
 }
 
 .skills-info-title {
-    color: rgba(255, 255, 255, 0.486);
-    text-shadow: 0px 6px 25px  rgba(255, 255, 255, 0.377);
     top: 0px;
-    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    top: 0px;
+    font-size: 3rem;
     z-index: 0;
     filter: blur(0.1px);
+    font-weight: normal;
     margin-bottom: 0px;
-    
+    position: absolute;
+    text-shadow: 0px 6px 2px  rgb(0, 0, 0);
+}
+
+.skills-info-title-back {
+    top: -20px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.336);
+    font-size: 4.5rem;
+    z-index: 0;
+    filter: blur(0.1px);
+    font-weight: normal;
+    margin-bottom: 0px;
+    position: absolute;
+    filter: blur(1px);
 }
 
 .skill-slogan {
     margin: 0;
     font-weight: normal;
+    font-family: none;
     color: rgb(157, 255, 247);
-    text-shadow: 0px 6px 25px rgb(138, 255, 255);
+    
     margin-bottom: 100px;
     font-size: 1.5rem;
+    font-style: italic;
 }
 
 
 
 .skills-container {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 550px;
+    width: 100%
 }
 
 .skill {
@@ -270,7 +333,6 @@ body {
     font-size: 0.8rem;
     text-shadow: 3px 4px 4px black;
     transition: transform 0.3s ease;
-    
 }
 
 .skill h2 {
@@ -280,34 +342,226 @@ body {
 
 .skill:hover {
     transform: scale(105%);
-    color: var(--ocolor);
 }
 
 
 
 .skill img {
-    border: 1px white solid;
-    border-radius: 30px;
     padding: 20px;
     width: 61px;
     height: auto;
     z-index: 2;
     position: absolute;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .img-container-skill {
+    border: 1px white solid;
+    overflow: hidden;
     position: relative;
-    width: 105px;
-    height: 105px;
+    width: 100px;
+    height: 110px;
+    border-radius: 30px;
 }
 
 .cover {
     position: absolute;
-    top: 0;
+    bottom: 0;
     z-index: 0;
-    border-radius: 30px;
-    filter: blur(3px);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
     width: 100%;
+    height: 0%;
+    background-color: #000000;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.skill:hover .img-skill {
+    background-color: white;
+}
+
+.skill:hover .cover {
+    height: var(--i);
+    z-index: 2;
+}
+
+
+
+.skill:hover .percent-skill {
+    opacity: 1;
+    z-index: 2;
+}
+
+.skill:active .img-skill {
+    opacity: 0;
+}
+
+.skill:active .percent-skill {
+    opacity: 1;
+}
+
+.skill:hover .cover {
+    height: var(--i);
+}
+
+.percent-skill {
+    color: rgb(0, 255, 234);
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    opacity: 0;
+}
+
+
+/*Projects Section*/
+
+.projects-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container {
+    margin-top: 170px;
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-section-title {
+    position: absolute;
+    top: 0px;
+    margin-top: 50px;
+    font-family: "font";
+    color: white;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+.projects-project-container {
+    width: auto;
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.projects-section-title-cover {
+    position: absolute;
+    top: 15px;
+    margin-top: 40px;
+    font-family: "font";
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.212);
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+
+.project {
+    background-color: rgb(0, 0, 0);
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 50px;
+    transition: all 0.3s ease;
+    
+}
+
+.project img {
+    width: 55%;
+    max-height: 100%;
+    min-height: 100%;
+    height: auto;
+    background-color: aqua;
+    object-fit: cover; /* hace que cubra sin deformarse */ /* centra la parte visible */
+    display: block;
+    
+}
+
+.info-project {
+    background-color: rgb(0, 0, 0);
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    position: relative;
+}
+
+
+.title-project {
+    letter-spacing: 0.11em;
+}
+
+.p-project {
+    font-family: "pfont";
+    color: var(--pcolor);
+}
+
+.info-project a {
+    text-decoration: none;
+    padding: 15px 40px;
+    width: 100px;
+    background-color: #252525;
+    color: white;
+    border-radius: 40px;
+    position: absolute;
+    bottom: 10px;
+}
+
+
+#button-car {
+    position: absolute;
+    border: 2px white solid;
+    padding: 1px 15px;
+    border-radius: 100px;
+    font-size: 2rem;
+    text-align: center;
+    cursor:default;
+    transition: all 0.3s ease;
+}
+.next-button {
+    right: 30px;
+    top: 50%;
+}
+.back-button {
+    left: 30px;
+    top: 50%;
+}
+
+#button-car:hover {
+    transform: translateX(var(--tr));
+}
+
+#button-car:active {
+    color: aqua;
+}
+
+/* Footer */
+
+.footer-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    height: 180px;
+
+}
+
+.footer-info-container a {
+    color: rgb(0, 126, 126);
 }

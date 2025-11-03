@@ -6,7 +6,7 @@
     <title>Juan Diego</title>
     <link rel="stylesheet" href="./css/home.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <script src="../Scripts/GUI/carrusel.js" type="module" defer></script>
 </head>
 <body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -17,7 +17,7 @@
 
     </Header>    
     <main>
-        <section class="title-section">
+        <section class="title-section"> 
             <div class="container-img-fond">
                 <img src="../Resources/imgs/fond.jpg" alt="" class="img-fond">
                 <div class="blakc-cover"></div>    
@@ -30,22 +30,26 @@
                 <a href="https://github.com/JuandDcm2009" target="_blank"><img src="../Resources/icons/github.svg" alt="github"></a>
             </div>
         </section>
+
         <section class="info-section">
-            <h1 class="section-title">ACERCA DE MI</h1>
-            <div class="img-container">
-                <div class="black-out"></div>
-                <img src="../Resources/imgs/perfil_image.jpeg" alt="Img">
+            <h1 class="section-title">Acerca de mi</h1>
+            <h1 class="section-title-cover">ACERCA DE MI</h1>
+            <div class="info-img-container">
+                <div class="img-container">
+                    <div class="black-out"></div>
+                    <img src="../Resources/imgs/perfil_image.jpeg" alt="Img">
+                </div>
+                <div class="info-container">
+                    <h2>Juan Diego Cristancho <br> Maldonado.</h2>
+                    <h3>Software Developer</h3>
+                    <p class="info-p">Desarrollador de Software con 2 años de aprendizaje y experiencia autónoma en proyectos personales, desarrollo de software y videojuegos con conocimientos en HTML, CSS, Javascript y Mysql también cuenta con habilidades como Aprendizaje activo, habilidades sociales, comunicación acertiva y gestión de tiempo, Juan Diego aspira mejorar cada día más en sus conocimientos, habilidades y hábitos productivos.</p>
+                    
+                    <a href="https://www.canva.com/design/DAGv6DLjkxM/nlT56N3w1uPSuf3ZDFSI2g/edit?utm_content=DAGv6DLjkxM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="hdv-button" target="_blank">Ver HDV</a>
+                </div>
             </div>
-            <div class="info-container">
-                <h2>Juan Diego Cristancho <br> Maldonado.</h2>
-                <h3>Software Developer</h3>
-                <p>Desarrollador de Software con 2 años de aprendizaje y experiencia autónoma en proyectos personales, desarrollo de software y videojuegos con conocimientos en HTML, CSS, Javascript y Mysql también cuenta con habilidades como Aprendizaje activo, habilidades sociales, comunicación acertiva y gestión de tiempo, Juan Diego aspira mejorar cada día más en sus conocimientos, habilidades y hábitos productivos.</p>
-                <p>◆ Telefono: +57 321 8915318 <br>
-                <p>◆ Correo: juanchocristancho2009@gmail.com </p>
-                <p>◆ Lenguaje: Español nativo - Ingles A2.3</p>
-                <a href="https://www.canva.com/design/DAGv6DLjkxM/nlT56N3w1uPSuf3ZDFSI2g/edit?utm_content=DAGv6DLjkxM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="hdv-button" target="_blank">Ver HDV</a>
-            </div>
+            
         </section>
+
         <section class="skills-section">
             <div class="img-skills-container">
                  <img src="../Resources/imgs/fondo_1.jpg" alt="fondo" class="fondo-skills">
@@ -53,77 +57,127 @@
             </div>
            <div class="skills-info-container" >
                 <h1 class="skills-info-title">Habilidades</h1>
-                <h2 class="skill-slogan">Desarollo, rompo, aprendo, repito. Ese es mi ciclo..</h2>
+                <h1 class="skills-info-title-back">HABILIDADES</h1>
                 <div class="skills-container">
-                    <div class="skill" >
+                    <div class="skill" style="--i: 90%; --c: blue">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/python.svg" alt="Python">
+                            <img src="../Resources/icons/python.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">90%</h1>
                         </div>
                         
                         <h2>Python</h2> 
                     </div>
-                    <div class="skill">
+                    <div class="skill" style="--i: 40%; --c: red">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/java.svg" alt="Python">
+                            <img src="../Resources/icons/java.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">40%</h1>
                         </div>
                         <h2>Java</h2> 
                     </div>
-                    <div class="skill">
+                    <div class="skill" style="--i: 95%; --c: orange">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/html-5.svg" alt="Python">
+                            <img src="../Resources/icons/html-5.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">95%</h1>
                         </div>
                         <h2>HTML 5</h2> 
                     </div>
-                    <div class="skill">
+                    <div class="skill" style="--i: 90%; --c: aqua">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/css-3.svg" alt="Python">
+                            <img src="../Resources/icons/css-3.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">90%</h1>
                         </div>
                         <h2>CSS 3</h2> 
                     </div>
-                    <div class="skill">
+                    <div class="skill" style="--i: 99%; --c: gray">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/reino-unido.svg" alt="Python">
+                            <img src="../Resources/icons/reino-unido.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">99%</h1>
                         </div>
                         <h2>Inglés A2.3</h2> 
                     </div>
-                    <div class="skill">
+                    <div class="skill" style="--i: 83%; --c: yellow">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/js.svg" alt="Python">
+                            <img src="../Resources/icons/js.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">83%</h1>
                         </div>
                         <h2>JavaScript</h2> 
                     </div>
-                    <div class="skill">
+                    <div class="skill" style="--i: 90%; --c: purple">
                         <div class="img-container-skill">
-                            <img src="../Resources/icons/mysql.svg" alt="Python">
+                            <img src="../Resources/icons/mysql.svg" alt="Python" class="img-skill">
                             <div class="cover"></div>
+                            <h1 class="percent-skill">90%</h1>
                         </div>
                         <h2>Mysql</h2> 
                     </div>
                 </div>
            </div>
-
-
         </section>
+
         <section class="projects-section">
+            <h1 class="projects-section-title">Proyectos</h1>
+            <h1 class="projects-section-title-cover">PROYECTOS</h1>
             <div class="projects-container">
-                <div class="project">
-                    <img src="" alt="">
-                    <div class="info-project">
-                        <h1 class="title-project">Projecto 1</h1>
-                        <p class="p-project">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae ullam hic ducimus quidem earum cum, animi ad nisi tenetur officia aperiam odio, repudiandae, molestias odit necessitatibus error sit. Cumque?</p>
-                    </div>
+                <div class="projects-project-container">
+
+                    <div class="project">
+                        <img src="../Resources/imgs/project1.png" alt="Algo" style="object-position: center;">
+
+                        <div class="info-project">
+                            <h1 class="title-project">Projecto: tienda virtual</h1>
+                            <p class="p-project">Este proyecto esta basado en una Tienda Virutal, que simula un sistema de compras virtuales y funciones como añadir al carrito e historial de busquedas, todo esto usando tegnologias como Javascript, HTML y CSS, Con un estilo simple y moderno otorgandole  una interfaz dinamica y amigable al usuario.</p>
+                            <a href="">Ver repositorio</a>
+                        </div>
+                    </div>  
+
+                    <div class="project">
+                        <img src="../Resources/imgs/project2.png" alt="Algo" style="object-position: left;">
+
+                        <div class="info-project">
+                            <h1 class="title-project">Proyecto web: Pagina de Formula 1</h1>
+                            <p class="p-project">Proyecto acerca de una Pagina web sobre autos de Formula 1. Realizado con tegnologias como CSS y HTML, simulando una pagina de alquiler de carros F1. <br> Esta cuenta con diseños de landing pages como: Login, Register, Dashboard, Services, Settings, entre otros.</p>
+                            <a href="">Ver repositorio</a>
+                        </div>
+                    </div>  
+
+                    <div class="project">
+                        <img src="../Resources/imgs/project3.png" alt="Algo" style="object-position: center;">
+
+                        <div class="info-project">
+                            <h1 class="title-project">Proyecto web: Pagina Informativa Hotelera</h1>
+                            <p class="p-project">Proyecto acerca de una pagina informativa, para un Hotel simulando habitaciones, servicios y ubicaciones contando una interfaz con animaciones fluidas y un estilo vintage moderno desarrollado con JavaScript, CSS y HTML.</p>
+                            <a href="">Ver repositorio</a>
+                        </div>
+                    </div> 
+
                 </div>
+                
             </div>
+            <div class="next-button" id="button-car" style="--tr: 5px">></div>
+            <div class="back-button" id="button-car" style="--tr: -5px"><</div>
+            
         </section>
     </main>
     <footer>
+        <div class="footer-info-container">
+            <div class="">  
+                <p>© Juan Diego C. Todos los derechos reservados.</p>
+                <p>Diseñado y desarrollado por Juan Diego Cristancho Maldonado</p>
 
+            </div>
+            <div>
+                <a href="">Linkedin</a>
+                <a href="">Github</a>
+                <p>+57 321 8915318</p>
+            </div>
+            
+        </div>
     </footer>
 </body>
 </html>
